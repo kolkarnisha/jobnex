@@ -1,4 +1,4 @@
-# 🚀 Jobnex — Intelligent Resume & Job Description Analyzer
+# 🚀 Jobnex — Intelligent Resume & Job Description Analyzer 
 
 > **Bridge the gap between your resume and your dream job with automated matching, skill gap analysis, and personalized career suggestions.**
 
