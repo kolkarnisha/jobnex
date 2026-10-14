@@ -1,12 +1,33 @@
 #main.py                                                                                                      
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel #,Field,felid_validator
 from database import get_connection
 from analyzer import analyze_resume
 import json
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
 
+app.add_middleware(CORSMiddleware, allow_origins=[
+        "http://127.0.0.1:5500",
+        "http://localhost:5500",
+        "http://127.0.0.1:5501",
+        "http://localhost:5501",
+    ],     allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# allow_origions=
+# ["http://127.0.0.1:8000/api/analyze",
+# "http://127.0.0.1:5500/api/analyze",
+# "http://localhost:5500/api/analyze",
+# "http://127.0.0.1:5501/api/analyze",
+# "http://localhost:8000/api/analyze",
+# "http://127.0.0.1:8000/api/analyze"],
+# allow_credentials=False,
+# allow_methods=["GET","POST"],allow_headers=["content-type"])
 
 class AnalyzeRequest(BaseModel):
     resume_text: str
