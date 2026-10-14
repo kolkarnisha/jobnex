@@ -8,6 +8,6 @@ def get_connection():
         host="127.0.0.1",
         port=3306,
         user="root",
-        password=os.environ["DB_PASSWORD"],
+        password="Njz@221027",
         database="jobnex",
     )

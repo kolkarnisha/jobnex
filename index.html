@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=device-width,initial-scale=1.0">
+    <title> JOBNEX</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main classs="container">
+        <h1> WELOCOME TO JOBNEX </h1>
+        <p> get ready to see your resume fit for given job describtion</p>
+        <form id="analyze-form">
+            <label for="resume_text"> give resume </label>
+            <textarea id="resume_text" placeholder="upload your resume here" required>  </textarea>
+            <label for="jd_text"> give jobdescription </label>
+            <textarea id="jd_text" placeholder="paste your jd here" required>  </textarea>
+
+            <button type="submit" id="analyze-button">analyze-resume </button>
+
+        </form>
+        <p id="status" role="status"> </p>
+        <section id="results" hidden>
+            <h2> analyze results</h2>
+            <pre id="result-data"> </pre>
+        </section>
+    </main>
+</body>
+<script src="script.js">    </script>
+
+</html>
